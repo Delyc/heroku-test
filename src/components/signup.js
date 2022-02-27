@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
-
+import google from "../assets/google.png";
 import * as Yup from "yup";
 import { useHistory } from "react-router-dom";
 
@@ -43,6 +43,8 @@ export default function Signup() {
       {!loading && (
         <div className="flex flex-col justify-center items-center w-2/3 md:w-1/3  ">
           <h1 className="text-blue-900 font-bold text-4xl">Sign Up</h1>
+
+          <img src={google} alt="" />
 
           <div className="h-11 mt-7 flex flex-row border border-red-300 justify-evenly items-center md:w-3/5 ">
           
