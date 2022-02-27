@@ -166,7 +166,7 @@ export default function Login() {
                 onChange={formik.handleChange}
                 value={formik.values.email}
               />
-              <div className=" absolute top-6 left-0 text-red-600 text-sm">
+              <div className=" absolute top-7 left-0 text-red-600 text-sm">
                 {formik.touched.email && formik.errors.email}
               </div>
             </div>
