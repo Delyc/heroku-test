@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
-import google from "../assets/google.png";
-import linkedin from "../assets/linkedin.png";
-import twitter from "../assets/twitter.png";
-import insta from "../assets/insta.png";
 
 import * as Yup from "yup";
 import { useHistory } from "react-router-dom";
@@ -49,10 +45,7 @@ export default function Signup() {
           <h1 className="text-blue-900 font-bold text-4xl">Sign Up</h1>
 
           <div className="h-11 mt-7 flex flex-row border border-red-300 justify-evenly items-center md:w-3/5 ">
-            <img className="w-8 " src={google} alt="" />
-            <img className="w-11 " src={linkedin} alt="" />
-            <img className="w-11 " src={insta} alt="" />
-            <img className="w-1/5 " src={twitter} alt="" />
+          
           </div>
 
           <div className="flex mt-5 ">
