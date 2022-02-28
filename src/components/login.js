@@ -53,7 +53,7 @@ export default function Login() {
   function googleskeletonbutton(renderProps) {
     return (
       <button
-        className="h-full flex items-center shadow-6xl text-blue-900 font-semibold text-text"
+        className="h-full flex items-center shadow-6xl text-blue-200 font-semibold text-text"
         onClick={() => renderProps.onClick()}
       > 
       <div className="w-7 h-7 rounded-full bg-gray-200 mr-2 ">
@@ -86,7 +86,7 @@ export default function Login() {
     /* ======================================Submti function ============================*/
     onSubmit: (values) => {
       setLoading(true);
-      toast.info("Sign up successfully");
+      toast.info("Signed in successfully");
 
       setTimeout(() => {
         setLoading(false);
@@ -106,13 +106,13 @@ export default function Login() {
 
       {!loading && (
         <div className="flex flex-col justify-center items-center  md:w-1/3   ">
-          <h1 className="text-blue-900 text-center font-bold text-4xl">
+          <h1 className="text-blue-200 text-center font-bold text-4xl">
             Sign Up
           </h1>
 
           {/* ============================= google login ======================================= */}
 
-          <div className="h-9 mt-7 flex flex-row  w-full md:w-3/5 border border-red-300 justify-evenly items-center  ">
+          <div className="h-9 mt-7 flex flex-row  w-full md:w-3/5 border border-red-100 justify-evenly items-center  ">
             {showLoginButton ? (
               <GoogleLogin
                 clientId={clientId}
@@ -133,13 +133,13 @@ export default function Login() {
           </div>
 
           <div className="flex mt-5 ">
-            <div className=" mt-2 grid grid-cols-1 w-1/5 mr-10 divide-y-2 divide-blue-900">
+            <div className=" mt-2 grid grid-cols-1 w-1/5 mr-10 divide-y-2 divide-blue-200">
               <p></p>
               <hr className="white" />
             </div>
-            <p className="text-red-500 font-bold">or</p>
+            <p className="text-red-200 font-bold">or</p>
 
-            <div className=" mt-2 grid grid-cols-1 w-1/5 ml-10 divide-y-2 divide-blue-900">
+            <div className=" mt-2 grid grid-cols-1 w-1/5 ml-10 divide-y-2 divide-blue-200">
               <p></p>
               <hr className="white" />
             </div>
@@ -153,12 +153,12 @@ export default function Login() {
             onSubmit={formik.handleSubmit}
           >
             <div className="test relative w-full flex flex-col ">
-              <label className="text-blue-900  font-medium" htmlFor="email">
+              <label className="text-blue-200  font-medium" htmlFor="email">
                 Email
               </label>
 
               <input
-                className="  w-full border-t-0 -mt-1 border-b  border-blue-900 focus:outline-none"
+                className="  w-full border-t-0 -mt-1 border-b  border-blue-200 focus:outline-none"
                 id="email"
                 type="email"
                 name="email"
@@ -166,7 +166,7 @@ export default function Login() {
                 onChange={formik.handleChange}
                 value={formik.values.email}
               />
-              <div className=" absolute top-7 left-0 text-red-600 text-sm">
+              <div className=" absolute top-7 left-0 text-red-200 text-sm">
                 {formik.touched.email && formik.errors.email}
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function Login() {
                 Password
               </label>
               <input
-                className=" w-full border-t-0 -mt-1 border-b  border-blue-900 focus:outline-none"
+                className=" w-full border-t-0 -mt-1 border-b  border-blue-200 focus:outline-none"
                 id="password"
                 type="password"
                 name="password"
@@ -184,13 +184,13 @@ export default function Login() {
                 onChange={formik.handleChange}
                 value={formik.values.password}
               />
-              <div className=" absolute top-6 left-0 text-red-600 text-sm">
+              <div className=" absolute top-6 left-0 text-red-200 text-sm">
                 {formik.touched.password && formik.errors.password}
               </div>
             </div>
 
             <button
-              className="bg-blue-900 text-white font-bold w-full mt-7 h-9"
+              className="bg-blue-200 text-white font-bold w-full mt-7 h-9"
               type="submit"
             >
               Sign in
@@ -199,7 +199,7 @@ export default function Login() {
 
           <p className="w-full md:w-3/5 ">
             don't have an account?{" "}
-            <span className="text-red-500 font-bold">Sign up</span>
+            <span className="text-red-200 font-bold">Sign up</span>
           </p>
         </div>
       )}
